@@ -16,7 +16,7 @@ VALA_PKGS := $(foreach pkg,$(PKGS),$(subst $(pkg),--pkg $(pkg),$(pkg)))
 VALA_VAPI := --vapidir=vapi
 
 CC := gcc
-CFLAGS  := $(shell $(PKGC) --cflags $(PKGS)) -DPVF_VERSION="$(VERSION)"
+CFLAGS  := $(shell $(PKGC) --cflags $(PKGS))
 LDFLAGS := $(shell $(PKGC) --libs $(PKGS))
 
 echo := echo -e
