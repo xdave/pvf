@@ -2,3 +2,24 @@ Test project for the portableproplib Vala bindings.
 
 Based on:
 	http://xtraeme.blogspot.com/2012/01/portable-proplib-vala-bindings.html
+
+
+Dependencies:
+* Linux
+* GNU Make
+* pkg-config
+* findutils (the 'find' command)
+* GLib 2.0 ('glib-devel' pkg)
+* Portable Property container object library ('proplib-devel' pkg)
+* Vala GObject Compiler ('vala-devel' pkg)
+* GNU C Compiler ('gcc' pkg)
+
+
+To test:
+
+	$ git clone https://davehome@github.com/davehome/pvf.git
+	$ cd pvf
+	$ make -j10
+	
+for usage, type:
+	$ bin/pvf
