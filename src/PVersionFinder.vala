@@ -1,11 +1,10 @@
 using PropLib;
 
 public class PVersionFinder {
-	public PDict pkgd;
-	public string val;
+	private PDict pkgd;
+	private string val;
 	public string pkgname;
 	public bool found;
-	public bool done;
 
 	public PVersionFinder() {}
 	
@@ -15,12 +14,11 @@ public class PVersionFinder {
 	}
 	
 	public string getVersion(string pkg = pkgname) {
-		string msg;
 		if (pkg != pkgname) { init(pkg); } 
 		found = prop_dictionary_get_cstring_nocopy(pkgd, "pkgver", out val);
 		if (!found) {
-			msg = "Can't find 'pkgver' object for: '" + pkg + "'!!";
-			return msg;
+			val = "Can't find 'pkgver' object for: '" + pkg + "'!!";
+			return val;
 		}
 		return val;
 	}
