@@ -23,8 +23,8 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-public static int main(string[] args) {
-	if (args.length < 2) {
+int main(string[] args) {
+	if (args.length == 1) {
 		stdout.printf("Usage: %s <pkgname(s) ...>\n", args[0]);
 		return 1;
 	}
