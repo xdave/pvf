@@ -23,14 +23,14 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-int main(string[] args) {
-	if (args.length == 1) {
-		stdout.printf("Usage: %s <pkgname(s) ...>\n", args[0]);
+int main(string[] argv) {
+	if (argv.length == 1) {
+		stdout.printf("Usage: %s <pkgname(s) ...>\n", argv[0]);
 		return 1;
 	}
 	var pvf = new PVersionFinder();
-	for (int i = 1; i < args.length; i++) {
-		stdout.printf("%d: %s\n", i, pvf.getVersion(args[i]));
+	for (int i = 1; i < argv.length; i++) {
+		stdout.printf("%d: %s\n", i, pvf.getVersion(argv[i]));
 	}
 	return 0;
 }

@@ -44,7 +44,6 @@ public class PVersionFinder {
 		found = prop_dictionary_get_cstring_nocopy(pkgd, "pkgver", out val);
 		if (!found) {
 			val = "Can't find 'pkgver' object for: '%s'!!".printf(pkg);
-			return val;
 		}
 		return val;
 	}
